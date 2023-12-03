@@ -17,6 +17,45 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".CreateVideoPost"
+            android:exported="false" />
+        <activity
+            android:name=".CreatePost"
+            android:exported="false" />
+        <activity
+            android:name=".YourVideoPost"
+            android:exported="false" />
+        <activity
+            android:name=".YourPost"
+            android:exported="false" />
+        <activity
+            android:name=".Friends"
+            android:exported="false" />
+        <activity
+            android:name=".Message"
+            android:exported="false" />
+        <activity
+            android:name=".VideoMessage"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="false" />
+        <activity
+            android:name=".SendVideoPost"
+            android:exported="false" />
+        <activity
+            android:name=".DisplayVideo2"
+            android:exported="false" />
+        <activity
+            android:name=".DisplayVideo"
+            android:exported="false" />
+        <activity
+            android:name=".Send_Post"
+            android:exported="false" />
+        <activity
             android:name=".videoimageplayer"
             android:exported="false"
             android:label="@string/title_activity_videoimageplayer"
