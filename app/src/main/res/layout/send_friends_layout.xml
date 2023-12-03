@@ -40,7 +40,7 @@
                 android:textStyle="bold"
                 android:visibility="invisible" />
         </LinearLayout>
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/sfriendshare"
             android:layout_width="100dp"
             android:layout_height="50dp"
