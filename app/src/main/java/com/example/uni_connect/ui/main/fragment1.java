@@ -64,8 +64,7 @@ public class fragment1 extends Fragment {
                 }
                 else
                 {
-                    Toast.makeText(getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });

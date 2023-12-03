@@ -78,8 +78,7 @@ public class MyAdapter2 extends RecyclerView.Adapter<productviewholder2> {
                             Intent(pcontext2,DisplayVideo.class);
                     intent.putExtra("Image",prolist2.get(holder.getAdapterPosition()).getUrl())
                     ;
-                    intent.putExtra("Image2",prolist2.get(holder.getAdapterPosition()).getPropi
-                            c());
+                    intent.putExtra("Image2",prolist2.get(holder.getAdapterPosition()).getPropic());
                     intent.putExtra("Name",prolist2.get(holder.getAdapterPosition()).getName2()
                     );
                     intent.putExtra("Title",prolist2.get(holder.getAdapterPosition()).getTitle(
@@ -90,8 +89,7 @@ public class MyAdapter2 extends RecyclerView.Adapter<productviewholder2> {
                 }
                 else
                 {
-                    Toast.makeText(v.getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });

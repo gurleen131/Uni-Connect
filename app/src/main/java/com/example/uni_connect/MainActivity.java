@@ -41,8 +41,7 @@ public class MainActivity extends AppCompatActivity {
         Btn = findViewById(R.id.button);
         Window window = this.getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUND
-                S);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(this.getResources().getColor(R.color.blue));
         Btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,8 +55,7 @@ public class MainActivity extends AppCompatActivity {
         GoogleSignInOptions googleSignInOptions=new
                 GoogleSignInOptions.Builder(
                 GoogleSignInOptions.DEFAULT_SIGN_IN
-        ).requestIdToken("508451649435-
-                t7hjp2q3nsapqi07c2j7jodbip84hhge.apps.googleusercontent.com")
+        ).requestIdToken("508451649435- t7hjp2q3nsapqi07c2j7jodbip84hhge.apps.googleusercontent.com")
                         .requestEmail()
                         .build();
         googleSignInClient= GoogleSignIn.getClient(MainActivity.this
@@ -102,14 +100,9 @@ public class MainActivity extends AppCompatActivity {
                         AuthCredential authCredential= GoogleAuthProvider
                                 .getCredential(googleSignInAccount.getIdToken()
                                         ,null);
-                        firebaseAuth.signInWithCredential(authCredential)
-                                .addOnCompleteListener(this, new
-                                        OnCompleteListener<AuthResult>() {
+                        firebaseAuth.signInWithCredential(authCredential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                                             @Override
-
-                                            public void onComplete(@NonNull
-
-                                                                   Task<AuthResult> task) {
+                                            public void onComplete(@NonNull Task<AuthResult> task) {
 // Check condition
                                                 if(task.isSuccessful())
                                                 {
@@ -119,23 +112,12 @@ public class MainActivity extends AppCompatActivity {
                                                             ,videoimageplayer.class)
                                                             .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                                                     displayToast("");
-                                                    FirebaseUser firebaseUser =
-                                                            FirebaseAuth.getInstance().getCurrentUser();
-                                                    String name =
-                                                            firebaseUser.getDisplayName().toString();
-                                                    String
-
-                                                            photo="https://firebasestorage.googleapis.com/v0/b/social-media-
-                                                    853d3.appspot.com/o/istockphoto.jpg?alt=media&token=d96a8857-6c2d-4b51-
-
-                                                        bc17-192daef26c38";
-                                                    userinfo u = new
-                                                            userinfo(name,photo);
-                                                    forfriends f = new
-                                                            forfriends(name,photo,FirebaseAuth.getInstance().getUid());
-                                                    FirebaseDatabase.getInstance().getReference().child("users")
-                                                            .child(FirebaseAuth.getInstance().getUid()).
-                                                            setValue(u).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                    FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+                                                    String name = firebaseUser.getDisplayName().toString();
+                                                    String photo="https://firebasestorage.googleapis.com/v0/b/social-media- 853d3.appspot.com/o/istockphoto.jpg?alt=media&token=d96a8857-6c2d-4b51- -192daef26c38";
+                                                    userinfo u = new userinfo(name,photo);
+                                                    forfriends f = new forfriends(name,photo,FirebaseAuth.getInstance().getUid());
+                                                    FirebaseDatabase.getInstance().getReference().child("users").child(FirebaseAuth.getInstance().getUid()).setValue(u).addOnCompleteListener(new OnCompleteListener<Void>() {
                                                                 @Override
                                                                 public void
 
@@ -145,8 +127,7 @@ public class MainActivity extends AppCompatActivity {
                                                                         Toast.makeText(MainActivity.this, "Sign In Successful!",
                                                                                 Toast.LENGTH_SHORT).show();
 
-                                                                        FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstanc
-                                                                                        e().getUid()+"friends")
+                                                                        FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getUid()+"friends")
                                                                                 .child(FirebaseAuth.getInstance().getUid()).
                                                                                 setValue(f);
                                                                     } else {
@@ -156,10 +137,7 @@ public class MainActivity extends AppCompatActivity {
                                                 }
                                                 else
                                                 {
-
-                                                    displayToast("Authentication
-                                                            Failed :"+task.getException()
-                                                        .getMessage());
+                                                    displayToast("Authentication Failed :"+task.getException().getMessage());
                                                 }
                                             }
                                         });

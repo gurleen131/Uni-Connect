@@ -52,8 +52,7 @@ public class MyAdapter3 extends RecyclerView.Adapter<productviewholder3> {
     public productviewholder3 onCreateViewHolder(@NonNull ViewGroup parent,
                                                  int viewType) {
         View mView2 =
-                LayoutInflater.from(parent.getContext()).inflate(R.layout.send_friends_layo
-                        ut,parent,false);
+                LayoutInflater.from(parent.getContext()).inflate(R.layout.send_friends_layout,parent,false);
         return new productviewholder3(mView2);
     }
     @Override
@@ -67,8 +66,7 @@ public class MyAdapter3 extends RecyclerView.Adapter<productviewholder3> {
         id3= FirebaseAuth.getInstance().getUid();
         databaseReference = FirebaseDatabase.getInstance().getReference();
         mDataBaseRef = FirebaseDatabase.getInstance().getReference();
-        mDataBaseRef.child(FirebaseAuth.getInstance().getUid()+"temporary").child("
-                1").addValueEventListener(new ValueEventListener() {
+        mDataBaseRef.child(FirebaseAuth.getInstance().getUid()+"temporary").child("1").addValueEventListener(new ValueEventListener() {
         @Override
         public void onDataChange(@NonNull DataSnapshot snapshot) {
             if(snapshot.exists()){
@@ -86,7 +84,7 @@ public class MyAdapter3 extends RecyclerView.Adapter<productviewholder3> {
         }
     });
     upload nji = new upload(propic,name2,title,id2,url,url,key);
-holder.b1.setOnClickListener(new View.OnClickListener() {
+    holder.b1.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
 
@@ -94,23 +92,17 @@ holder.b1.setOnClickListener(new View.OnClickListener() {
                     pcontext3.getSystemService(Context.CONNECTIVITY_SERVICE);
             NetworkInfo activenetwork = manager.getActiveNetworkInfo();
             if(null!=activenetwork){
-                FirebaseDatabase.getInstance().getReference().child("message"+holder.t2.get
-                                Text().toString()).child(key)
+                FirebaseDatabase.getInstance().getReference().child("message"+holder.t2.getText().toString()).child(key)
                         .child("id2").setValue(id2);
-                FirebaseDatabase.getInstance().getReference().child("message"+holder.t2.get
-                                Text().toString()).child(key)
+                FirebaseDatabase.getInstance().getReference().child("message"+holder.t2.getText().toString()).child(key)
                         .child("key").setValue(key);
-                FirebaseDatabase.getInstance().getReference().child("message"+holder.t2.get
-                                Text().toString()).child(key)
+                FirebaseDatabase.getInstance().getReference().child("message"+holder.t2.getText().toString()).child(key)
                         .child("name2").setValue(name2);
-                FirebaseDatabase.getInstance().getReference().child("message"+holder.t2.get
-                                Text().toString()).child(key)
+                FirebaseDatabase.getInstance().getReference().child("message"+holder.t2.getText().toString()).child(key)
                         .child("propic").setValue(propic);
-                FirebaseDatabase.getInstance().getReference().child("message"+holder.t2.get
-                                Text().toString()).child(key)
+                FirebaseDatabase.getInstance().getReference().child("message"+holder.t2.getText().toString()).child(key)
                         .child("title").setValue(title);
-                FirebaseDatabase.getInstance().getReference().child("message"+holder.t2.get
-                                Text().toString()).child(key)
+                FirebaseDatabase.getInstance().getReference().child("message"+holder.t2.getText().toString()).child(key)
                         .child("url").setValue(url);
                 Toast.makeText(v.getContext(), "Sent successfully!",
                         Toast.LENGTH_SHORT).show();
@@ -120,8 +112,7 @@ holder.b1.setOnClickListener(new View.OnClickListener() {
             }
             else
             {
-                Toast.makeText(v.getContext(),"No Internet
-                        Connection",Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
             }
         }
     });

@@ -52,8 +52,7 @@ public class MyAdapter7 extends RecyclerView.Adapter<productviewholder7> {
     public productviewholder7 onCreateViewHolder(@NonNull ViewGroup parent,
                                                  int viewType) {
         View mView2 =
-                LayoutInflater.from(parent.getContext()).inflate(R.layout.last_layout,paren
-                        t,false);
+                LayoutInflater.from(parent.getContext()).inflate(R.layout.last_layout,parent,false);
         return new productviewholder7(mView2);
     }
     @Override
@@ -92,23 +91,17 @@ holder.b1.setOnClickListener(new View.OnClickListener() {
                     pcontext3.getSystemService(Context.CONNECTIVITY_SERVICE);
             NetworkInfo activenetwork = manager.getActiveNetworkInfo();
             if(null!=activenetwork){
-                FirebaseDatabase.getInstance().getReference().child("videomessage"+holder.t
-                2.getText().toString()).child(key)
+                FirebaseDatabase.getInstance().getReference().child("videomessage"+holder.t2.getText().toString()).child(key)
                         .child("id2").setValue(id2);
-                FirebaseDatabase.getInstance().getReference().child("videomessage"+holder.t
-                2.getText().toString()).child(key)
+                FirebaseDatabase.getInstance().getReference().child("videomessage"+holder.t2.getText().toString()).child(key)
                         .child("key").setValue(key);
-                FirebaseDatabase.getInstance().getReference().child("videomessage"+holder.t
-                2.getText().toString()).child(key)
+                FirebaseDatabase.getInstance().getReference().child("videomessage"+holder.t2.getText().toString()).child(key)
                         .child("name2").setValue(name2);
-                FirebaseDatabase.getInstance().getReference().child("videomessage"+holder.t
-                2.getText().toString()).child(key)
+                FirebaseDatabase.getInstance().getReference().child("videomessage"+holder.t2.getText().toString()).child(key)
                         .child("propic").setValue(propic);
-                FirebaseDatabase.getInstance().getReference().child("videomessage"+holder.t
-                2.getText().toString()).child(key)
+                FirebaseDatabase.getInstance().getReference().child("videomessage"+holder.t2.getText().toString()).child(key)
                         .child("title").setValue(title);
-                FirebaseDatabase.getInstance().getReference().child("videomessage"+holder.t
-                2.getText().toString()).child(key)
+                FirebaseDatabase.getInstance().getReference().child("videomessage"+holder.t2.getText().toString()).child(key)
 
                         .child("url").setValue(url);
                 Toast.makeText(v.getContext(), "Sent successfully!",
@@ -119,8 +112,7 @@ holder.b1.setOnClickListener(new View.OnClickListener() {
             }
             else
             {
-                Toast.makeText(v.getContext(),"No Internet
-                        Connection",Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
             }
         }
     });

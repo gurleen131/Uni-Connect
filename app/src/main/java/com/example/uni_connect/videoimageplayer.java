@@ -13,9 +13,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import com.example.social_media2.ui.main.SectionsPagerAdapter;
+import com.example.uni_connect.ui.main.SectionsPagerAdapter;
 import
-        com.example.social_media2.databinding.ActivityVideoimageplayerBinding;
+        com.example.uni_connect.databinding.ActivityVideoimageplayerBinding;
 public class videoimageplayer extends AppCompatActivity {
     private ActivityVideoimageplayerBinding binding;
     @Override
@@ -33,6 +33,7 @@ public class videoimageplayer extends AppCompatActivity {
         tabs.setupWithViewPager(viewPager);
     }
     public void onBackPressed() {
+        super.onBackPressed();
         Intent intent = new Intent(Intent.ACTION_MAIN);
         intent.addCategory(Intent.CATEGORY_HOME);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

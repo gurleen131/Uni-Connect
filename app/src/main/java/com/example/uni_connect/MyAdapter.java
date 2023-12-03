@@ -43,8 +43,7 @@ public class MyAdapter extends RecyclerView.Adapter<productviewholder> {
     public productviewholder onCreateViewHolder(@NonNull ViewGroup parent,
                                                 int viewType) {
         View mView =
-                LayoutInflater.from(parent.getContext()).inflate(R.layout.insta_feed_rv_ite
-                        m,parent,false);
+                LayoutInflater.from(parent.getContext()).inflate(R.layout.insta_feed_rv_item,parent,false);
         return new productviewholder(mView);
     }
     @Override
@@ -116,8 +115,7 @@ public class MyAdapter extends RecyclerView.Adapter<productviewholder> {
                         pcontext.getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo activenetwork = manager.getActiveNetworkInfo();
                 if(null!=activenetwork){
-                    FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstanc
-                                    e().getUid()+"temporary").child("1").
+                    FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getUid()+"temporary").child("1").
                             setValue(u).addOnCompleteListener(new
                                                                       OnCompleteListener<Void>() {
                                                                           @Override
@@ -133,8 +131,7 @@ public class MyAdapter extends RecyclerView.Adapter<productviewholder> {
                 }
                 else
                 {
-                    Toast.makeText(v.getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -166,8 +163,7 @@ public class MyAdapter extends RecyclerView.Adapter<productviewholder> {
 
                                                                                                            task) {
                                                                                 if (task.isSuccessful()) {
-                                                                                    databaseReference.child(FirebaseAuth.getInstance().getUid()).addValueEventL
-                                                                                    istener(new ValueEventListener() {
+                                                                                    databaseReference.child(FirebaseAuth.getInstance().getUid()).addValueEventListener(new ValueEventListener() {
                                                                                         @Override
                                                                                         public void
                                                                                         onDataChange(@NonNull DataSnapshot snapshot) {
@@ -186,8 +182,7 @@ public class MyAdapter extends RecyclerView.Adapter<productviewholder> {
                                                                                     forfriends u1 = new forfriends(a1,
 
                                                                                             a2, id);
-                                                                                    FirebaseDatabase.getInstance().getReference().child(holder.t5.getText().toS
-                                                                                            tring() + "friends").child(id).setValue(u1);
+                                                                                    FirebaseDatabase.getInstance().getReference().child(holder.t5.getText().toString() + "friends").child(id).setValue(u1);
                                                                                     Toast.makeText(view.getContext(),
                                                                                             "Friend Added!", Toast.LENGTH_SHORT).show();
                                                                                 } else {
@@ -198,8 +193,7 @@ public class MyAdapter extends RecyclerView.Adapter<productviewholder> {
 
                 else
                 {
-                    Toast.makeText(view.getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(view.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });

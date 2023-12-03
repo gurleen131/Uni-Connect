@@ -50,8 +50,7 @@ public class MyAdapter5 extends RecyclerView.Adapter<productviewholder5> {
     public productviewholder5 onCreateViewHolder(@NonNull ViewGroup parent,
                                                  int viewType) {
         View mView2 =
-                LayoutInflater.from(parent.getContext()).inflate(R.layout.your_videopost_la
-                        yout,parent,false);
+                LayoutInflater.from(parent.getContext()).inflate(R.layout.your_videopost_layout,parent,false);
         return new productviewholder5(mView2);
     }
     @Override
@@ -79,8 +78,7 @@ public class MyAdapter5 extends RecyclerView.Adapter<productviewholder5> {
                     intent.putExtra("Image",prolist5.get(holder.getAdapterPosition()).getUrl())
 
                     ;
-                    intent.putExtra("Image2",prolist5.get(holder.getAdapterPosition()).getPropi
-                            c());
+                    intent.putExtra("Image2",prolist5.get(holder.getAdapterPosition()).getPropic());
                     intent.putExtra("Name",prolist5.get(holder.getAdapterPosition()).getName2()
                     );
                     intent.putExtra("Title",prolist5.get(holder.getAdapterPosition()).getTitle(
@@ -93,8 +91,7 @@ public class MyAdapter5 extends RecyclerView.Adapter<productviewholder5> {
                 }
                 else
                 {
-                    Toast.makeText(v.getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });

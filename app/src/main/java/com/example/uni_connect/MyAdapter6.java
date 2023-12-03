@@ -52,8 +52,7 @@ public class MyAdapter6 extends RecyclerView.Adapter<productviewholder6> {
 
                                                  int viewType) {
         View mView2 =
-                LayoutInflater.from(parent.getContext()).inflate(R.layout.remove_friend,par
-                        ent,false);
+                LayoutInflater.from(parent.getContext()).inflate(R.layout.remove_friend,parent,false);
         return new productviewholder6(mView2);
     }
     @Override
@@ -75,14 +74,12 @@ public class MyAdapter6 extends RecyclerView.Adapter<productviewholder6> {
                         pcontext3.getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo activenetwork = manager.getActiveNetworkInfo();
                 if(null!=activenetwork){
-                    FirebaseDatabase.getInstance().getReference().child(id3+"friends").child(ho
-                            lder.t2.getText().toString()).removeValue().addOnCompleteListener(new
+                    FirebaseDatabase.getInstance().getReference().child(id3+"friends").child(holder.t2.getText().toString()).removeValue().addOnCompleteListener(new
                                                                                                       OnCompleteListener<Void>() {
                                                                                                           @Override
 
                                                                                                           public void onComplete(@NonNull Task<Void> task) {
-                                                                                                              Toast.makeText(v.getContext(), "Friend
-                                                                                                                      Removed!", Toast.LENGTH_SHORT).show();
+                                                                                                              Toast.makeText(v.getContext(), "Friend Removed!", Toast.LENGTH_SHORT).show();
                                                                                                               Intent i = new
                                                                                                                       Intent(pcontext3,videoimageplayer.class);
                                                                                                               i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK
@@ -93,8 +90,7 @@ public class MyAdapter6 extends RecyclerView.Adapter<productviewholder6> {
                 }
                 else
                 {
-                    Toast.makeText(v.getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });

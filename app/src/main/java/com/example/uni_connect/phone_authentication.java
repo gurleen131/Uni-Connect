@@ -36,8 +36,7 @@ public class phone_authentication extends AppCompatActivity {
         p1 = findViewById(R.id.progressBar);
         Window window = this.getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUND
-                S);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(this.getResources().getColor(R.color.blue));
         mAuth = FirebaseAuth.getInstance();
         edtPhone = findViewById(R.id.idEdtPhoneNumber);
@@ -48,8 +47,7 @@ public class phone_authentication extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (TextUtils.isEmpty(edtPhone.getText().toString())) {
-                    Toast.makeText(phone_authentication.this, "Please enter
-                            a valid phone number.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(phone_authentication.this, "Please enter a valid phone number.", Toast.LENGTH_SHORT).show();
                 } else {
                     p1.setVisibility(View.VISIBLE);
                     String phone = "+91" + edtPhone.getText().toString();
@@ -61,8 +59,7 @@ public class phone_authentication extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (TextUtils.isEmpty(edtOTP.getText().toString())) {
-                    Toast.makeText(phone_authentication.this, "Please enter
-                            OTP", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(phone_authentication.this, "Please enter OTP", Toast.LENGTH_SHORT).show();
                 } else {
                     verifyCode(edtOTP.getText().toString());
                 }
@@ -88,10 +85,7 @@ public class phone_authentication extends AppCompatActivity {
                             String name = edtPhone.getText().toString();
                             String
 
-                                    photo="https://firebasestorage.googleapis.com/v0/b/social-media-
-                            853d3.appspot.com/o/istockphoto.jpg?alt=media&token=d96a8857-6c2d-4b51-
-
-                                    bc17-192daef26c38";
+                                    photo="https://firebasestorage.googleapis.com/v0/b/social-media-853d3.appspot.com/o/istockphoto.jpg?alt=media&token=d96a8857-6c2d-4b51- bc17-192daef26c38";
                             userinfo u = new userinfo(name,photo);
                             forfriends f = new
                                     forfriends(name,photo,FirebaseAuth.getInstance().getUid());
@@ -107,8 +101,7 @@ public class phone_authentication extends AppCompatActivity {
                                                                                       if (task.isSuccessful()) {
                                                                                           Toast.makeText(phone_authentication.this, "Sign In Successful!",
                                                                                                   Toast.LENGTH_SHORT).show();
-                                                                                          FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstanc
-                                                                                                          e().getUid()+"friends")
+                                                                                          FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getUid()+"friends")
                                                                                                   .child(FirebaseAuth.getInstance().getUid()).
                                                                                                   setValue(f);
                                                                                       } else {
@@ -128,14 +121,10 @@ public class phone_authentication extends AppCompatActivity {
 
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(mAuth)
-                        .setPhoneNumber(number) // Phone number to
-        verify
-                .setTimeout(60L, TimeUnit.SECONDS) // Timeout and
-        unit
-                .setActivity(this) // Activity (for
-        callback binding)
-.setCallbacks(mCallBack) //
-        OnVerificationStateChangedCallbacks
+                        .setPhoneNumber(number) // Phone number to verify
+                .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+                .setActivity(this) // Activity (for callback binding)
+.setCallbacks(mCallBack) // OnVerificationStateChangedCallbacks
                 .build();
         PhoneAuthProvider.verifyPhoneNumber(options);
     }
