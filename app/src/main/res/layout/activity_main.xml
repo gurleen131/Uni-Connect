@@ -19,6 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.669" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button"
         android:layout_width="330dp"
@@ -27,15 +28,18 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="@color/blue"
+        android:background="@color/blue"
         android:text="Phone"
+        android:textAlignment="center"
         android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.803" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -43,7 +47,7 @@
         android:gravity="center"
         android:text="or"
         android:textColor="@color/black"
-        android:textSize="12dp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -67,7 +71,7 @@
         android:layout_height="wrap_content"
         android:text="Sign In"
         android:textColor="@color/blue"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
