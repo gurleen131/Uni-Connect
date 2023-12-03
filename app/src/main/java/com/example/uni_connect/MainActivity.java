@@ -12,3 +12,4 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 }
+//tunde ki kebaba khale ghundaleen
