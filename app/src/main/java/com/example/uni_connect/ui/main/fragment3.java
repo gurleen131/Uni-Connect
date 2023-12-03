@@ -58,8 +58,7 @@ public class fragment3 extends Fragment {
 
         t1 =(TextView) view.findViewById(R.id.textView);
         acc = FirebaseDatabase.getInstance().getReference();
-        acc.child("users").child(FirebaseAuth.getInstance().getUid()).addValueEvent
-        Listener(new ValueEventListener() {
+        acc.child("users").child(FirebaseAuth.getInstance().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
@@ -87,8 +86,7 @@ public class fragment3 extends Fragment {
                 }
                 else
                 {
-                    Toast.makeText(v.getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -100,15 +98,12 @@ public class fragment3 extends Fragment {
                         getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo activenetwork = manager.getActiveNetworkInfo();
                 if(null!=activenetwork){
-                    Intent i2 = new Intent(getActivity(),
-                            YourVideoPost.class);
+                    Intent i2 = new Intent(getActivity(),YourVideoPost.class);
                     startActivity(i2);
                 }
                 else
                 {
-                    Toast.makeText(v.getContext(),"No Internet
-
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -125,8 +120,7 @@ public class fragment3 extends Fragment {
                 }
                 else
                 {
-                    Toast.makeText(v.getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -143,8 +137,7 @@ public class fragment3 extends Fragment {
                 }
                 else
                 {
-                    Toast.makeText(v.getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -156,14 +149,12 @@ public class fragment3 extends Fragment {
                         getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo activenetwork = manager.getActiveNetworkInfo();
                 if(null!=activenetwork){
-                    Intent i4 = new Intent(getActivity(),
-                            VideoMessage.class);
+                    Intent i4 = new Intent(getActivity(),VideoMessage.class);
                     startActivity(i4);
                 }
                 else
                 {
-                    Toast.makeText(v.getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -178,17 +169,14 @@ public class fragment3 extends Fragment {
                 if(null!=activenetwork){
                     AlertDialog.Builder alertDialog = new
                             AlertDialog.Builder(getContext());
-                    alertDialog.setTitle("Exit"); // Sets title for your
-                    alertbox
-                    alertDialog.setMessage("Do you really want to Logout
-                                    ?"); // Message to be displayed on alertbox
+                    alertDialog.setTitle("Exit"); // Sets title for your alertbox
+                    alertDialog.setMessage("Do you really want to Logout ?"); // Message to be displayed on alertbox
                             /* When positive (yes/ok) is clicked */
                             alertDialog.setPositiveButton("Yes", new
                                     DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog,int
                                                 which) {
-                                            Toast.makeText(getContext(), "Signed Out
-                                                    successfully!", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(getContext(), "Signed Out successfully!", Toast.LENGTH_SHORT).show();
                                             FirebaseAuth fAuth =
                                                     FirebaseAuth.getInstance();
                                             fAuth.signOut();
@@ -214,8 +202,7 @@ public class fragment3 extends Fragment {
                 }
                 else
                 {
-                    Toast.makeText(v.getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -229,14 +216,12 @@ public class fragment3 extends Fragment {
                         getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo activenetwork = manager.getActiveNetworkInfo();
                 if(null!=activenetwork){
-                    Intent i6 = new Intent(getActivity(),
-                            ProfileActivity.class);
+                    Intent i6 = new Intent(getActivity(),ProfileActivity.class);
                     startActivity(i6);
                 }
                 else
                 {
-                    Toast.makeText(v.getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
 
             }

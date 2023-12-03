@@ -61,14 +61,12 @@ public class fragment2 extends Fragment {
                         getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo activenetwork = manager.getActiveNetworkInfo();
                 if(null!=activenetwork){
-                    Intent i=new Intent(getActivity(),
-                            CreateVideoPost.class);
+                    Intent i=new Intent(getActivity(), CreateVideoPost.class);
                     startActivity(i);
                 }
                 else
                 {
-                    Toast.makeText(getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });
