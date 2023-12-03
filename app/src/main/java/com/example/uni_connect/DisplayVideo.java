@@ -52,8 +52,7 @@ public class DisplayVideo extends AppCompatActivity {
         videoView = (VideoView) findViewById(R.id.videoView);
         Window window = this.getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUND
-                S);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(this.getResources().getColor(R.color.blue));
         Bundle mbundle = getIntent().getExtras();
         if(mbundle!=null){
@@ -80,8 +79,7 @@ public class DisplayVideo extends AppCompatActivity {
         videoView.setMediaController(mediaController);
         videoView.setVideoURI(uri);
         videoView.start();
-        Toast.makeText(getApplicationContext(),"Please
-                wait!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Please wait!",Toast.LENGTH_SHORT).show();
 
         mDataBaseRef = FirebaseDatabase.getInstance().getReference();
         mDataBaseRef.child(t4.getText().toString()+"likes").child("likes").
@@ -89,9 +87,7 @@ public class DisplayVideo extends AppCompatActivity {
                 addValueEventListener(new ValueEventListener() {
                     @Override
 
-                    public void onDataChange(@NonNull DataSnapshot
-
-                                                     snapshot) {
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if(snapshot.exists()){
                             count=(int) snapshot.getChildrenCount();
                             t3.setText(Integer.toString(count));
@@ -120,16 +116,13 @@ public class DisplayVideo extends AppCompatActivity {
                                                            OnCompleteListener<Void>() {
                                                                @Override
 
-                                                               public void onComplete(@NonNull Task<Void>
-
-                                                                                              task) {
+                                                               public void onComplete(@NonNull Task<Void> task) {
                                                                }
                                                            });
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -140,8 +133,7 @@ public class DisplayVideo extends AppCompatActivity {
                         getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo activenetwork = manager.getActiveNetworkInfo();
                 if(null!=activenetwork){
-                    FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstanc
-                                    e().getUid()+"temporary").child("1").
+                    FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getUid()+"temporary").child("1").
                             setValue(uv).addOnCompleteListener(new
                                                                        OnCompleteListener<Void>() {
 
@@ -157,8 +149,7 @@ public class DisplayVideo extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -187,8 +178,7 @@ public class DisplayVideo extends AppCompatActivity {
                                                                            public void onComplete(@NonNull Task<Void>
                                                                                                           task) {
                                                                                if (task.isSuccessful()) {
-                                                                                   databaseReference.child(FirebaseAuth.getInstance().getUid()).addValueEventL
-                                                                                   istener(new ValueEventListener() {
+                                                                                   databaseReference.child(FirebaseAuth.getInstance().getUid()).addValueEventListener(new ValueEventListener() {
                                                                                        @Override
                                                                                        public void
 
@@ -218,8 +208,7 @@ public class DisplayVideo extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });

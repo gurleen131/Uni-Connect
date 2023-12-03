@@ -76,8 +76,7 @@ public class CreatePost extends AppCompatActivity {
         e1=findViewById(R.id.editTextTextPersonName);
         Window window = this.getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUND
-                S);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(this.getResources().getColor(R.color.blue));
         i1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,8 +89,7 @@ public class CreatePost extends AppCompatActivity {
                         "Select Picture!"), PICK_IMAGE);
             }
         });
-        databaseReference.child(FirebaseAuth.getInstance().getUid()).addValueEventL
-        istener(new ValueEventListener() {
+        databaseReference.child(FirebaseAuth.getInstance().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userinfo obj = snapshot.getValue(userinfo.class);
@@ -118,8 +116,7 @@ public class CreatePost extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -191,8 +188,7 @@ public class CreatePost extends AppCompatActivity {
                                                               }
 
                                                           });
-        FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstanc
-                        e().getUid()+"posts")
+        FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getUid()+"posts")
                 .child(mycurrenttime2).
                 setValue(u).addOnCompleteListener(new
                                                           OnCompleteListener<Void>() {
@@ -201,8 +197,7 @@ public class CreatePost extends AppCompatActivity {
                                                               public void onComplete(@NonNull Task<Void> task) {
 
                                                                   if (task.isSuccessful()) {
-                                                                      Toast.makeText(CreatePost.this,"Your Post is
-                                                                              now online!",Toast.LENGTH_LONG).show();
+                                                                      Toast.makeText(CreatePost.this,"Your Post is now online!",Toast.LENGTH_LONG).show();
                                                                       finish();
                                                                       Intent i = new
                                                                               Intent(CreatePost.this,videoimageplayer.class);

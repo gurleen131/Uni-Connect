@@ -66,11 +66,9 @@ public class CreateVideoPost extends AppCompatActivity {
         Window window = this.getWindow();
 
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUND
-                S);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(this.getResources().getColor(R.color.blue));
-        databaseReference.child(FirebaseAuth.getInstance().getUid()).addValueEventL
-        istener(new ValueEventListener() {
+        databaseReference.child(FirebaseAuth.getInstance().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userinfo obj = snapshot.getValue(userinfo.class);
@@ -93,8 +91,7 @@ public class CreateVideoPost extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -139,8 +136,7 @@ public class CreateVideoPost extends AppCompatActivity {
                                                                              HashMap<String, String> map = new HashMap<>();
                                                                              map.put("videolink", downloadUri);
                                                                              torealtime();
-                                                                             Toast.makeText(CreateVideoPost.this, "Video
-                                                                                     Uploaded!!", Toast.LENGTH_SHORT).show();
+                                                                             Toast.makeText(CreateVideoPost.this, "Video Uploaded!!", Toast.LENGTH_SHORT).show();
                                                                          }
                                                                      }).addOnFailureListener(new OnFailureListener() {
                 @Override
@@ -170,8 +166,7 @@ public class CreateVideoPost extends AppCompatActivity {
                                                                   }
                                                               }
                                                           });
-        FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstanc
-                        e().getUid()+"videoposts")
+        FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getUid()+"videoposts")
                 .child(mycurrenttime2).
                 setValue(u).addOnCompleteListener(new
                                                           OnCompleteListener<Void>() {
@@ -185,9 +180,7 @@ public class CreateVideoPost extends AppCompatActivity {
                                                                               Intent(CreateVideoPost.this,videoimageplayer.class);
                                                                       startActivity(i);
 
-                                                                      Toast.makeText(CreateVideoPost.this, "Your Post
-
-                                                                              is Online!", Toast.LENGTH_SHORT).show();
+                                                                      Toast.makeText(CreateVideoPost.this, "Your Post is Online!", Toast.LENGTH_SHORT).show();
                                                                   } else {
                                                                   }
                                                               }

@@ -1,11 +1,9 @@
 package com.example.uni_connect;
 
-import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -17,6 +15,9 @@ import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -26,6 +27,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 public class DisplayVideo2 extends AppCompatActivity {
     String ke3,prop,a1,a2,random,x1,x2,x3,x4,x5,x6,x7;
@@ -52,8 +54,7 @@ public class DisplayVideo2 extends AppCompatActivity {
         videoView = (VideoView) findViewById(R.id.videoViewdis);
         Window window = this.getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUND
-                S);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(this.getResources().getColor(R.color.blue));
         Bundle mbundle = getIntent().getExtras();
         if(mbundle!=null){
@@ -81,8 +82,7 @@ public class DisplayVideo2 extends AppCompatActivity {
         videoView.setMediaController(mediaController);
         videoView.setVideoURI(uri);
         videoView.start();
-        Toast.makeText(getApplicationContext(),"Please
-                wait!",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),"Please wait!",Toast.LENGTH_SHORT).show();
 
         mDataBaseRef = FirebaseDatabase.getInstance().getReference();
         mDataBaseRef.child(t4.getText().toString()+"likes").child("likes").
@@ -130,8 +130,7 @@ public class DisplayVideo2 extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -142,8 +141,7 @@ public class DisplayVideo2 extends AppCompatActivity {
                         getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo activenetwork = manager.getActiveNetworkInfo();
                 if(null!=activenetwork){
-                    FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstanc
-                                    e().getUid()+"temporary").child("1").
+                    FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getUid()+"temporary").child("1").
                             setValue(uv).addOnCompleteListener(new
                                                                        OnCompleteListener<Void>() {
                                                                            @Override
@@ -158,8 +156,7 @@ public class DisplayVideo2 extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -185,8 +182,7 @@ public class DisplayVideo2 extends AppCompatActivity {
                                                                @Override
                                                                public void
                                                                onComplete(@androidx.annotation.NonNull Task<Void> task) {
-                                                                   FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstanc
-                                                                                   e().getUid()+"videoposts")
+                                                                   FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getUid()+"videoposts")
                                                                            .child(t4.getText().toString()).removeValue().addOnCompleteListener(new
                                                                                                                                                        OnCompleteListener<Void>() {
                                                                                                                                                            @Override
@@ -204,8 +200,7 @@ public class DisplayVideo2 extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });
