@@ -89,8 +89,7 @@ public class MyAdapter4 extends RecyclerView.Adapter<productviewholder4> {
                 NetworkInfo activenetwork = manager.getActiveNetworkInfo();
                 if(null!=activenetwork){
                     id3 = f1.getUid();
-                    FirebaseDatabase.getInstance().getReference().child(holder.t4.getText().toS
-                                    tring()+"likes")
+                    FirebaseDatabase.getInstance().getReference().child(holder.t4.getText().toString()+"likes")
                             .child("likes").child(id3).setValue("1")
                             .addOnCompleteListener(new
                                                            OnCompleteListener<Void>() {
@@ -104,8 +103,7 @@ public class MyAdapter4 extends RecyclerView.Adapter<productviewholder4> {
                 }
                 else
                 {
-                    Toast.makeText(view.getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(view.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -116,8 +114,7 @@ public class MyAdapter4 extends RecyclerView.Adapter<productviewholder4> {
                         pcontext4.getSystemService(Context.CONNECTIVITY_SERVICE);
                 NetworkInfo activenetwork = manager.getActiveNetworkInfo();
                 if(null!=activenetwork){
-                    FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstanc
-                                    e().getUid()+"temporary").child("1").
+                    FirebaseDatabase.getInstance().getReference().child(FirebaseAuth.getInstance().getUid()+"temporary").child("1").
                             setValue(u).addOnCompleteListener(new
                                                                       OnCompleteListener<Void>() {
                                                                           @Override
@@ -137,8 +134,7 @@ public class MyAdapter4 extends RecyclerView.Adapter<productviewholder4> {
                 }
                 else
                 {
-                    Toast.makeText(v.getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -181,8 +177,7 @@ public class MyAdapter4 extends RecyclerView.Adapter<productviewholder4> {
                 }
                 else
                 {
-                    Toast.makeText(view.getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(view.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
 
             }

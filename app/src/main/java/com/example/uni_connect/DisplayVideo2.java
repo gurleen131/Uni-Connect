@@ -6,7 +6,6 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -206,8 +205,9 @@ public class DisplayVideo2 extends AppCompatActivity {
         });
     }
     public void onBackPressed() {
+        super.onBackPressed();
         Intent intent = new
-                Intent(DisplayVideo2.this,videoimageplayer.class);
+                Intent(DisplayVideo2.this, videoimageplayer.class);
         startActivity(intent);
 
     }

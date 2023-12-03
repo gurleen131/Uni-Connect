@@ -64,8 +64,7 @@ public class ProfileActivity extends AppCompatActivity {
         p1 = findViewById(R.id.progressBar2);
         Window window = this.getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUND
-                S);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(this.getResources().getColor(R.color.blue));
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,18 +75,15 @@ public class ProfileActivity extends AppCompatActivity {
                 if(null!=activenetwork){
                     AlertDialog.Builder alertDialog = new
                             AlertDialog.Builder(ProfileActivity.this);
-                    alertDialog.setTitle("Exit"); // Sets title for your
-                    alertbox
-                    alertDialog.setMessage("Do you really want to Delete
-                            Account?"); // Message to be displayed on alertbox
+                    alertDialog.setTitle("Exit"); // Sets title for youralertbox
+                    alertDialog.setMessage("Do you really want to Delete Account?"); // Message to be displayed on alertbox
                             /* When positive (yes/ok) is clicked */
                             alertDialog.setPositiveButton("Yes", new
                                     DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog,int
 
                                                 which) {
-                                            Toast.makeText(ProfileActivity.this, "Account
-                                                    Deleted successfully!", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(ProfileActivity.this, "Account Deleted successfully!", Toast.LENGTH_SHORT).show();
                                             FirebaseAuth fAuth =
                                                     FirebaseAuth.getInstance();
                                             fAuth.signOut();
@@ -112,15 +108,13 @@ public class ProfileActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(v.getContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(v.getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
             }
         });
         storageReference = FirebaseStorage.getInstance().getReference();
         acc = FirebaseDatabase.getInstance().getReference();
-        acc.child("users").child(FirebaseAuth.getInstance().getUid()).addValueEvent
-        Listener(new ValueEventListener() {
+        acc.child("users").child(FirebaseAuth.getInstance().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
@@ -165,8 +159,7 @@ public class ProfileActivity extends AppCompatActivity {
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(),"No Internet
-                            Connection",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -220,8 +213,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
     public void upload2(){
         userinfo u = new userinfo( t1.getText().toString(),imgUrl);
-        FirebaseDatabase.getInstance().getReference().child("users").child(Firebase
-                        Auth.getInstance().getUid())
+        FirebaseDatabase.getInstance().getReference().child("users").child(FirebaseAuth.getInstance().getUid())
                 .setValue(u).addOnCompleteListener(new
                                                            OnCompleteListener<Void>() {
                                                                @Override
@@ -232,9 +224,7 @@ public class ProfileActivity extends AppCompatActivity {
                                                                            Intent(ProfileActivity.this,videoimageplayer.class);
                                                                    startActivity(i7);
 
-                                                                   Toast.makeText(ProfileActivity.this,"Profile
-
-                                                                           Update!",Toast.LENGTH_LONG).show();
+                                                                   Toast.makeText(ProfileActivity.this,"Profile Update!",Toast.LENGTH_LONG).show();
                                                                }
                                                            });
     }

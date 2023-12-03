@@ -41,12 +41,10 @@ public class Send_Post extends AppCompatActivity {
         acc = FirebaseDatabase.getInstance().getReference().child("users");
         Window window = this.getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUND
-                S);
+        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(this.getResources().getColor(R.color.blue));
 
-//LinearLayoutManager gridLayoutManager = new
-        LinearLayoutManager(getApplicationContext());
+//LinearLayoutManager gridLayoutManager = newLinearLayoutManager(getApplicationContext());
         LinearLayoutManager gridLayoutManager = new
                 LinearLayoutManager(getApplicationContext());
         recycle.setLayoutManager(gridLayoutManager);

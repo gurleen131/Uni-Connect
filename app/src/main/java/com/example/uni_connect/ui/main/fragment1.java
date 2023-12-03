@@ -68,8 +68,7 @@ public class fragment1 extends Fragment {
                 }
             }
         });
-//LinearLayoutManager gridLayoutManager = new
-        LinearLayoutManager(getApplicationContext());
+//LinearLayoutManager gridLayoutManager = newLinearLayoutManager(getApplicationContext());
         LinearLayoutManager gridLayoutManager = new
                 LinearLayoutManager(getContext());
         recycle.setLayoutManager(gridLayoutManager);

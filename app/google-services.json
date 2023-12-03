@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "148356150089",
+    "firebase_url": "https://uni-connect-817db-default-rtdb.firebaseio.com",
     "project_id": "uni-connect-817db",
     "storage_bucket": "uni-connect-817db.appspot.com"
   },
@@ -12,7 +13,20 @@
           "package_name": "com.example.uni_connect"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "148356150089-o9oqppmu6v3b8p0klvjh5didgm80j9av.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.uni_connect",
+            "certificate_hash": "6c403d3d385d02495c9a60d78183c8d94f8d9955"
+          }
+        },
+        {
+          "client_id": "148356150089-2drj9g7j8f1d2mtonl00ud85euqbrehb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyC4pq_PAdlk2rXJhbNO0HqI371OivUM0HM"
@@ -20,7 +34,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148356150089-2drj9g7j8f1d2mtonl00ud85euqbrehb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
