@@ -58,8 +58,7 @@ public class MainActivity extends AppCompatActivity {
         ).requestIdToken("148356150089-2drj9g7j8f1d2mtonl00ud85euqbrehb.apps.googleusercontent.com")
                         .requestEmail()
                         .build();
-        googleSignInClient= GoogleSignIn.getClient(MainActivity.this
-                ,googleSignInOptions);
+        googleSignInClient= GoogleSignIn.getClient(MainActivity.this,googleSignInOptions);
         btSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
