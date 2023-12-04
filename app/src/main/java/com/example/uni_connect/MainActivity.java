@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         GoogleSignInOptions googleSignInOptions=new
                 GoogleSignInOptions.Builder(
                 GoogleSignInOptions.DEFAULT_SIGN_IN
-        ).requestIdToken("508451649435- t7hjp2q3nsapqi07c2j7jodbip84hhge.apps.googleusercontent.com")
+        ).requestIdToken("148356150089-2drj9g7j8f1d2mtonl00ud85euqbrehb.apps.googleusercontent.com")
                         .requestEmail()
                         .build();
         googleSignInClient= GoogleSignIn.getClient(MainActivity.this
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                                                     displayToast("");
                                                     FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
                                                     String name = firebaseUser.getDisplayName().toString();
-                                                    String photo="https://firebasestorage.googleapis.com/v0/b/social-media- 853d3.appspot.com/o/istockphoto.jpg?alt=media&token=d96a8857-6c2d-4b51- -192daef26c38";
+                                                    String photo="https://firebasestorage.googleapis.com/v0/b/social-media-853d3.appspot.com/o/istockphoto.jpg?alt=media&token=d96a8857-6c2d-4b51--192daef26c38";
                                                     userinfo u = new userinfo(name,photo);
                                                     forfriends f = new forfriends(name,photo,FirebaseAuth.getInstance().getUid());
                                                     FirebaseDatabase.getInstance().getReference().child("users").child(FirebaseAuth.getInstance().getUid()).setValue(u).addOnCompleteListener(new OnCompleteListener<Void>() {
