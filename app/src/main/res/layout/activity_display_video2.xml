@@ -30,16 +30,16 @@
             android:text="Name"
             android:textColor="@color/black"
             android:textStyle="bold" />
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/addfriend3dis"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
             android:text="Delete"
-            android:backgroundTint="@color/blue"
+            android:background="@color/blue"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="10dp"
+            android:textSize="10sp"
             android:textStyle="bold"
             app:cornerRadius="20dp"
             app:strokeColor="@color/white"
@@ -90,7 +90,7 @@
                 android:textStyle="bold" />
             <!--text view to display the caption
             in instagram post-->
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/idTVLikesbtn3dis"
                 android:layout_width="170dp"
                 android:layout_height="35dp"
@@ -118,17 +118,17 @@
             android:layout_marginTop="6dp"
             android:orientation="vertical"
             >
-            <com.google.android.material.button.MaterialButton
+            <Button
                 android:id="@+id/sharebutton3dis"
                 android:layout_width="367dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
                 android:text="Share"
                 android:layout_marginLeft="4dp"
-                android:backgroundTint="@color/blue"
+                android:background="@color/blue"
                 android:gravity="center"
                 android:textColor="@color/white"
-                android:textSize="10dp"
+                android:textSize="10sp"
                 android:textStyle="bold"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/white"
