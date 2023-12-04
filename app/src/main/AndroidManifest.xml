@@ -14,8 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
-        tools:targetApi="33">
-<!--        android:theme="@style/Theme.UniConnect"-->
+        tools:targetApi="33"
+        tools:ignore="ExtraText">
+        android:theme="@style/Theme.UniConnect"
 
         <activity
             android:name=".CreateVideoPost"
