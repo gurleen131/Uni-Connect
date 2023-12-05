@@ -54,7 +54,7 @@ public class DisplayVideo2 extends AppCompatActivity {
         Window window = this.getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(this.getResources().getColor(R.color.blue));
+        window.setStatusBarColor(this.getResources().getColor(R.color.bluuee));
         Bundle mbundle = getIntent().getExtras();
         if(mbundle!=null){
 

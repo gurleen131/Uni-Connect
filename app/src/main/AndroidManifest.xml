@@ -9,9 +9,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/uniconnect_logo"
         android:label="@string/uni_connect"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/uniconnect_logo"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         tools:targetApi="34"
@@ -21,51 +21,80 @@
 
         <activity
             android:name=".CreateVideoPost"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light"
+            />
         <activity
             android:name=".CreatePost"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light"
+            />
         <activity
             android:name=".YourVideoPost"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light"
+            />
         <activity
             android:name=".YourPost"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light"
+            />
         <activity
             android:name=".Friends"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light"
+            />
         <activity
             android:name=".Message"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light"
+            />
         <activity
             android:name=".VideoMessage"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light"
+            />
         <activity
             android:name=".ProfileActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light"
+            />
         <activity
             android:name=".SplashScreen"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light"
+            />
         <activity
             android:name=".SendVideoPost"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light"
+            />
         <activity
             android:name=".DisplayVideo2"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light"
+            />
         <activity
             android:name=".DisplayVideo"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light"
+            />
         <activity
             android:name=".Send_Post"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light"
+            />
         <activity
             android:name=".videoimageplayer"
             android:exported="false"
             android:label="@string/title_activity_videoimageplayer"
-            android:theme="@style/NoActionBar" />
+            android:theme="@style/Theme.Material3.Light"
+            />
         <activity
             android:name=".phone_authentication"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.Material3.Light"
+            />
         <activity
             android:name=".MainActivity"
             android:exported="true">

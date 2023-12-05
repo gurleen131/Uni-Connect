@@ -14,8 +14,8 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
-        android:background="@color/blue"
-        app:cardBackgroundColor="@color/blue"
+        android:background="@color/bluuee"
+        app:cardBackgroundColor="@color/bluuee"
         app:cardCornerRadius="10dp"
         app:cardElevation="1dp"
         app:cardMaxElevation="1dp"
@@ -24,14 +24,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:strokeColor="@color/blue"
+        app:strokeColor="@color/bluuee"
         app:strokeWidth="1dp">
         <LinearLayout
             android:id="@+id/linearaout2yvp"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="5dp"
-            android:background="@color/blue"
+            android:background="@color/bluuee"
             android:orientation="horizontal"
             android:weightSum="6">
             <de.hdodenhof.circleimageview.CircleImageView

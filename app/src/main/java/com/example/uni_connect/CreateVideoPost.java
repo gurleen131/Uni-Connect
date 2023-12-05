@@ -3,7 +3,7 @@ package com.example.uni_connect;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import android.app.ProgressDialog;
+
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -31,13 +31,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
-import de.hdodenhof.circleimageview.CircleImageView;
+
 public class CreateVideoPost extends AppCompatActivity {
     EditText e1;
     FirebaseAuth f1;
@@ -67,7 +66,7 @@ public class CreateVideoPost extends AppCompatActivity {
 
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(this.getResources().getColor(R.color.blue));
+        window.setStatusBarColor(this.getResources().getColor(R.color.bluuee));
         databaseReference.child(FirebaseAuth.getInstance().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

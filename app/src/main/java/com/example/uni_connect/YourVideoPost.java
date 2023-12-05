@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
-import de.hdodenhof.circleimageview.CircleImageView;
+
 public class YourVideoPost extends AppCompatActivity {
     public DatabaseReference acc;
     RecyclerView recyclerView;
@@ -37,7 +37,7 @@ public class YourVideoPost extends AppCompatActivity {
         Window window = this.getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(this.getResources().getColor(R.color.blue));
+        window.setStatusBarColor(this.getResources().getColor(R.color.bluuee));
         LinearLayoutManager gridLayoutManager2 = new
                 LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(gridLayoutManager2);
