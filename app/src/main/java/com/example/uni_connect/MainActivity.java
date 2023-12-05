@@ -25,6 +25,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.FirebaseDatabase;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+
 public class MainActivity extends AppCompatActivity {
     // Initialize variables
     SignInButton btSignIn;
@@ -74,6 +78,9 @@ public class MainActivity extends AppCompatActivity {
                     Intent(MainActivity.this,videoimageplayer.class)
                     .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         }
+
+        AppCenter.start(getApplication(), "3169884a-f098-49f4-afca-35e397c62ed4",
+                Analytics.class, Crashes.class);
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode,
