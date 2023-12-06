@@ -29,7 +29,7 @@
         android:layout_width="294dp"
         android:layout_height="50dp"
         android:text="Select and upload"
-        android:textSize="10dp"
+        android:textSize="10sp"
         android:textStyle="bold"
         app:cornerRadius="20dp"
         app:strokeColor="@color/white"
