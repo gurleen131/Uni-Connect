@@ -34,7 +34,7 @@ public class Friends extends AppCompatActivity {
         Window window = this.getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(this.getResources().getColor(R.color.bluuee));
+        window.setStatusBarColor(this.getResources().getColor(R.color.blue_logo));
 //LinearLayoutManager gridLayoutManager = newLinearLayoutManager(getApplicationContext());
         LinearLayoutManager gridLayoutManager = new
                 LinearLayoutManager(getApplicationContext());

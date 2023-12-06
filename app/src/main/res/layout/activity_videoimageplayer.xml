@@ -10,13 +10,13 @@
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/bluuee"
+        android:background="@color/blue_logo"
         android:theme="@style/Theme.Social_media2.AppBarOverlay">
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/bluuee"
+            android:background="@color/blue_logo"
             />
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.viewpager.widget.ViewPager
