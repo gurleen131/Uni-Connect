@@ -5,4 +5,8 @@
     <string name="tab_text_2">Videos</string>
     <string name="tab_text_3">Profile</string>
     <string name="uni_connect">Uni-Connect</string>
+    <string name="emojilike">Like &#x1F496;</string>
+    <string name="emojishare">Share &#x1F4F2;</string>
+    <string name="emojiunfriend">Remove &#x1F494;</string>
+
 </resources>

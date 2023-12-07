@@ -45,13 +45,13 @@
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:background="@color/blue_logo"
+            android:backgroundTint="@color/blue_logo"
             android:textAlignment="center"
             app:strokeColor="@color/white"
             app:strokeWidth="1dp"
             app:cornerRadius="20dp"
             android:textColor="@color/white"
-            android:textSize="10sp"
+            android:textSize="15sp"
             android:text="Send" />
     </LinearLayout>
 </RelativeLayout>

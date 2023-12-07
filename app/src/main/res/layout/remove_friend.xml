@@ -40,18 +40,19 @@
                 android:textStyle="bold"
                 android:visibility="invisible" />
         </LinearLayout>
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/sfriendsharere"
-            android:layout_width="100dp"
+            android:layout_width="118dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:background="@color/blue_logo"
-            app:strokeColor="@color/white"
-            app:strokeWidth="1dp"
-            app:cornerRadius="20dp"
+            android:backgroundTint="@color/blue_logo"
+            android:text="@string/emojiunfriend"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="10sp"
-            android:text="Remove" />
+            android:textSize="13sp"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/white"
+            app:strokeWidth="1dp" />
     </LinearLayout>
 </RelativeLayout>

@@ -7,15 +7,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     tools:context=".MainActivity">
-    <!--Edittext for getting users phone number-->
-    <!--Button for getting OTP-->
-    <!--Edittext for getting otp from user-->
-    <!--button for verifying user OTP-->
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="228dp"
+        android:layout_height="280dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/app_logo" />
+
     <EditText
         android:id="@+id/idEdtPhoneNumber"
         android:layout_width="330dp"
         android:layout_height="50dp"
-        android:textSize="10sp"
+        android:textSize="15sp"
         android:hint="Enter your phone"
         android:importantForAutofill="no"
         android:inputType="phone"
@@ -34,12 +43,12 @@
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_below="@id/idEdtPhoneNumber"
-        android:background="@color/blue_logo"
+        android:backgroundTint="@color/blue_logo"
         android:gravity="center"
         android:text="Get OTP"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="10sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,7 +66,8 @@
         android:layout_height="50dp"
         android:layout_below="@id/idBtnGetOtp"
         android:hint="Enter OTP"
-        android:textSize="10sp"
+
+        android:textSize="15sp"
         android:textColorHint="@color/black"
         android:importantForAutofill="no"
         android:inputType="phone"
@@ -74,14 +84,14 @@
         android:layout_width="330dp"
         android:layout_height="50dp"
         android:layout_below="@id/idEdtOtp"
-        android:background="@color/blue_logo"
+        android:backgroundTint="@color/blue_logo"
         android:gravity="center"
         android:text="Verify OTP"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="10sp"
+        android:textSize="15sp"
         android:textStyle="bold"
-        app:cornerRadius="20dp"
+        app:cornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -95,12 +105,12 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="85dp"
         android:layout_height="78dp"
-        android:visibility="invisible"
         android:indeterminate="true"
         android:indeterminateTint="@color/blue_logo"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.756" />
 </androidx.constraintlayout.widget.ConstraintLayout>

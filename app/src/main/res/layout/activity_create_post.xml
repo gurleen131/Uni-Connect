@@ -30,7 +30,7 @@
         android:layout_height="50dp"
         android:backgroundTint="@color/black"
         android:ems="10"
-        android:hint="Caption"
+        android:hint="Write your Caption"
         android:inputType="textPersonName"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
@@ -48,9 +48,10 @@
         android:backgroundTint="@color/blue_logo"
         android:gravity="center"
         android:text="Upload"
-        android:textSize="10dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
         android:textStyle="bold"
-        app:circularflow_radiusInDP="20dp"
+        app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -72,5 +73,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
+        app:layout_constraintVertical_bias="0.715" />
 </androidx.constraintlayout.widget.ConstraintLayout>

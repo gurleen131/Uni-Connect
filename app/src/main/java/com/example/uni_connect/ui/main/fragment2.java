@@ -52,7 +52,7 @@ public class fragment2 extends Fragment {
                 inflater.inflate(R.layout.fragment2_layout,container,false);
         recycle2=(RecyclerView) view.findViewById(R.id.recycler_view);
         acc = FirebaseDatabase.getInstance().getReference().child("users");
-        btn =(Button) view.findViewById(R.id.button22);
+        btn =(Button) view.findViewById(R.id.button2);
         acc = FirebaseDatabase.getInstance().getReference().child("users");
         btn.setOnClickListener(new View.OnClickListener() {
             @Override

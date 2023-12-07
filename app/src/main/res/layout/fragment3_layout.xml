@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
-    android:background="@color/white"
+    android:backgroundTint="@color/white"
     >
 
     <Button
@@ -17,20 +17,21 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/blue_logo"
+        android:backgroundTint="@color/blue_logo"
         android:text="Your Posts"
         android:textColor="@color/white"
-        android:textSize="10sp"
+        android:textSize="15sp"
+
         android:textStyle="bold"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.537"
         app:strokeColor="@color/white"
         app:strokeWidth="1dp" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button6"
         android:layout_width="215dp"
@@ -40,20 +41,21 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/blue_logo"
+        android:backgroundTint="@color/blue_logo"
         android:text="Your Video Posts"
         android:textColor="@color/white"
-        android:textSize="10sp"
+        android:textSize="15sp"
+
         android:textStyle="bold"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.621"
         app:strokeColor="@color/white"
         app:strokeWidth="1dp" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button7"
         android:layout_width="215dp"
@@ -62,20 +64,21 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/blue_logo"
+        android:backgroundTint="@color/blue_logo"
         android:text="Your Friends"
         android:textColor="@color/white"
-        android:textSize="10sp"
+        android:textSize="15sp"
+
         android:textStyle="bold"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.706"
         app:strokeColor="@color/white"
         app:strokeWidth="1dp" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button8"
         android:layout_width="215dp"
@@ -84,21 +87,22 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/blue_logo"
+        android:backgroundTint="@color/blue_logo"
         android:text="Your Message"
         android:textColor="@color/white"
-        android:textSize="10sp"
+        android:textSize="15sp"
+
         android:textStyle="bold"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.79"
         app:strokeColor="@color/white"
         app:strokeWidth="1dp" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button9"
         android:layout_width="215dp"
@@ -107,20 +111,21 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/blue_logo"
+        android:backgroundTint="@color/blue_logo"
         android:text="Your Video Message"
         android:textColor="@color/white"
-        android:textSize="10sp"
+        android:textSize="15sp"
+
         android:textStyle="bold"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.875"
         app:strokeColor="@color/white"
         app:strokeWidth="1dp" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button10"
         android:layout_width="215dp"
@@ -129,20 +134,21 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/red"
+        android:backgroundTint="@color/red"
         android:text="Logout"
         android:textColor="@color/white"
-        android:textSize="10sp"
+        android:textSize="15sp"
+
         android:textStyle="bold"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.959"
         app:strokeColor="@color/white"
         app:strokeWidth="1dp" />
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button11"
         android:layout_width="215dp"
@@ -151,21 +157,21 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:background="@color/blue_logo"
+        android:backgroundTint="@color/blue_logo"
         android:text="Edit Profile"
 
         android:textColor="@color/white"
-        android:textSize="10sp"
+        android:textSize="15sp"
         android:textStyle="bold"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.452"
         app:strokeColor="@color/white"
         app:strokeWidth="1dp" />
+
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/slidephoto"
         android:layout_width="130dp"

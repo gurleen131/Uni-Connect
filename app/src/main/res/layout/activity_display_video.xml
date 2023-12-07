@@ -59,34 +59,37 @@
             android:layout_marginTop="1dp"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop" />
+
         <TextView
             android:id="@+id/idTVdesc3"
             android:layout_width="370dp"
-            android:layout_height="25dp"
-            android:text="Caption"
+            android:layout_height="33dp"
             android:layout_marginLeft="4dp"
+            android:layout_marginTop="6dp"
             android:padding="5dp"
+            android:text="Caption"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:layout_marginTop="6dp" />
+            android:textStyle="bold" />
         <LinearLayout
             android:layout_width="400dp"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/idTVLikes3"
 
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
+                android:layout_width="183dp"
+                android:layout_height="80dp"
                 android:layout_below="@id/idTVdesc"
                 android:layout_marginStart="15dp"
+                android:layout_marginLeft="4dp"
                 android:layout_marginTop="6dp"
                 android:layout_marginEnd="6dp"
                 android:layout_marginBottom="6dp"
-                android:layout_marginLeft="4dp"
                 android:padding="5dp"
-                android:text="likes"
+                android:text="0"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
             <!--text view to display the caption
@@ -102,8 +105,8 @@
                 android:layout_marginEnd="6dp"
                 android:layout_marginBottom="6dp"
                 android:padding="5dp"
-                android:text="likes"
-                android:background="@color/blue_logo"
+                android:text="@string/emojilike"
+                android:backgroundTint="@color/blue_logo"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="10sp"
@@ -123,12 +126,12 @@
                 android:layout_width="367dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="3dp"
-                android:text="Share"
+                android:text="@string/emojishare"
                 android:layout_marginLeft="4dp"
-                android:background="@color/blue_logo"
+                android:backgroundTint="@color/blue_logo"
                 android:gravity="center"
                 android:textColor="@color/white"
-                android:textSize="10sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 app:cornerRadius="20dp"
                 app:strokeColor="@color/white"
