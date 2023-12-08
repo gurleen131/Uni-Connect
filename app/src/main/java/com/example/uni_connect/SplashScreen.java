@@ -10,7 +10,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 public class SplashScreen extends AppCompatActivity {
     Context context=null;
-    private int SPLASH_DISPLAY_LENGTH = 4000;
+    private int SPLASH_DISPLAY_LENGTH = 6000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
